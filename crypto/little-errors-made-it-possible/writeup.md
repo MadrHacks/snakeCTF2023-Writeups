@@ -5,8 +5,8 @@
 We are supplied with:
 - a prime `p`
 - an error bound `error_bound`
-- a list `b` of 50 values in $$Z_p$$
-- a list `A` of 50 lists of 5 values each. The values are in $$Z_p$$
+- a list `b` of 50 values in $Z_p$
+- a list `A` of 50 lists of 5 values each. The values are in $Z_p$
 
 The description told us that `b` values are generated in the following way: `A*s + e = b`
 
