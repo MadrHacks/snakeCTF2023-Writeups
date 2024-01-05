@@ -55,7 +55,7 @@ The last equation can follow two directions:
 **Algorithm**:
 1) Save the public key corresponding to the session key (obtained by setting the cookie to `0`). We call it `REF_public_key`.
 2) For `i` in `0..256` we can compute the public key obtained by setting `i_th` bit of the cookie to `1` and the rest to `0`. We call it `analyzed_public_key`. 
-    - If $analyzed\_key == REF\_public\_key + 2^i$ then the `i_th` bit of the session key was `0`
+    - If $\text{analyzed\_key} == \text{REF\_public\_key} + 2^i$ then the `i_th` bit of the session key was `0`
     - `1` otherwise
 
 
