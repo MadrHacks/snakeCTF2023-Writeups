@@ -23,7 +23,7 @@ The problem is solvable only if errors are not so big, this is the reason why an
 
 There is more than one technique to solve this problem. The following we are presenting is the so called **Kannan's Embedding technique** which works fine in our case because the error_bound is small. 
 
-The idea is to define a lattice $$L'$$ which contains the short vector `e`. 
+The idea is to define a lattice $L'$ which contains the short vector `e`. 
 We know that $$A\times s \approx b$$. Our objective is to find a vector `b'` in the lattice closed to `b`. We can proceed in two ways: 
 - finding `e`, then subtracting `e` from `b`
 - directly finding `b'`
