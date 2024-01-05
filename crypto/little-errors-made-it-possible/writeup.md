@@ -5,8 +5,8 @@
 We are supplied with:
 - a prime `p`
 - an error bound `error_bound`
-- a list `b` of 50 values in $$\ZZ_p$$
-- a list `A` of 50 lists of 5 values each. The values are in $$\ZZ_p$$
+- a list `b` of 50 values in $$Z_p$$
+- a list `A` of 50 lists of 5 values each. The values are in $$Z_p$$
 
 The description told us that `b` values are generated in the following way: `A*s + e = b`
 
@@ -35,7 +35,7 @@ $$
 \begin{bmatrix}
 A^T & 0\\
 pI_{50} & 0\\
-b \\ M
+b & M
 \end{bmatrix}
 $$
 
@@ -48,7 +48,7 @@ Given `e`, we can compute `b'` by simply subtract `e` from `b`.
 
 The difficult part is done. Now we have got the linear equation `As = b'` which is easily solvable.
 
-If you want to learn something else, you can read this document: [link]{https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch18.pdf}
+If you want to learn something else, you can read this document: [link](https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch18.pdf)
 
 ### The flag
 Once found the vector `s`, convert each value in the vector to bytes and concatenate the found strings to obtain the flag.
