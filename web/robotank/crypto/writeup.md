@@ -54,12 +54,12 @@ The last equation can follow two directions:
 
 **Algorithm**:
 1) Save the public key corresponding to the session key (obtained by setting the cookie to `0`). We call it `REF_public_key`.
-2) For `i` in `0..256` we can compute the public key obtained by setting `i_th` bit of the cookie to `1` and the rest to `0`. We call it `analyzed_public_key`. 
-    - If `analyzed_key == REF_public_key + 2^i` then the `i_th` bit of the session key was `0`
+2) For `i` in `0..256` we can compute the public key obtained by setting the `i_th` bit of the cookie to `1` and the others to `0`. We call it `analyzed_public_key`. 
+    - If `analyzed_public_key == REF_public_key + 2^i` then the `i_th` bit of the session key was `0`
     - `1` otherwise
 
 
-In this way we can obtain the corresponding `session key`. 
+By doing so, we can obtain the corresponding `session key`. 
 
 ### Getting the private key
 
