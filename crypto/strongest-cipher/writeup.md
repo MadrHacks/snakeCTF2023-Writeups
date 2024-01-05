@@ -8,7 +8,7 @@ By reading the code, one could notice that it is a simple version of Kyber (one 
 Otherwise, it is not so difficult to reverse the encryption function by using the secret key. 
 
 You need to pay attention at the scaling function. During encryption the message is first upscaled:
-$$m \rightarrow \frac{p}{2}m$$ This operation centeres the message values at $\frac{q}{2}$.
+$$m \rightarrow \frac{p}{2}m$$ This operation centeres the message values at $\frac{p}{2}$.
 
 In order to get the original plaintext, you need to downscale your compressed plaintext.
 $$c \rightarrow \frac{2}{p}c$$ This operation will center the values at `0`. The obtained values are in $Z_p$, so they are not the original bits `0` and `1`. How can we obtain the bits from those values?
@@ -33,7 +33,7 @@ The error vector `e` has size 2 x 1 and coefficients in `{0,1}`.
 
 Each polynomial has got 8 coefficients. The vector `e` is composed by two polynomials, then we will have to deal with 16 coefficients whose values are `0` or `1`. How many possibilities? $$2^{16}$$
 
-Then, it's straightforward performing an exhaustive search on the error vector. For each possible vector `e'`, we can subtract `e'` from `b` and solve the linear system `A\times s = b - e'`.
+Then, it's straightforward to perform an exhaustive search on the error vector. For each possible vector `e'`, we can subtract `e'` from `b` and solve the linear system `A\times s = b - e'`.
 
 How to get the correct vector `s`?
 Indeed, we can obtain more than one solution. Therefore, we can simply use the decryption function as an oracle. If the decrypted message (each byte has been encrypted separately) contains the word `snakeCTF`, we just got the correct vector `s`.

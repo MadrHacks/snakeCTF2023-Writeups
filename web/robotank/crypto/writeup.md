@@ -5,7 +5,7 @@
 In the `account` page, the service gives us:
 - the generator of the group of the elliptic curve
 - the public key (a point on the curve) `P = (x,y)`
-- a challenge to sign in order to create the right token `challenge`
+- a `challenge`` to sign in order to create the correct token 
 
 By analyzing the source code we can discover that:
 - the chosen elliptic curve is `ED25519`.

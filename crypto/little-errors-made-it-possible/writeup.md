@@ -16,20 +16,20 @@ It is related to the use of lattices and in particular of the most famous **Shor
 The problem is solvable only if errors are not so big, this is the reason why an error bound is supplied.
 
 ### Solution
-`A` is matrix of dimension 50 x 5 
-`b` is a vector of dimension 50 x 1
-`e` must be a vector of dimension 50 x 1
-`s` must be a vector of dimension 5 x 1
+- `A` is a matrix of dimension 50 x 5 
+- `b` is a vector of dimension 50 x 1
+- `e` must be a vector of dimension 50 x 1
+- `s` must be a vector of dimension 5 x 1
 
-There is more than one technique to solve this problem. The following we are presenting is the so called **Kannan's Embedding technique** which works fine in our case because the error_bound is small. 
+There is more than one technique to solve this problem. The following we are presenting is the so called **Kannan's Embedding technique** which works fine in our case because the `error_bound` is small. 
 
 The idea is to define a lattice $L'$ which contains the short vector `e`. 
-We know that $$A\times s \approx b$$. Our objective is to find a vector `b'` in the lattice closed to `b`. We can proceed in two ways: 
+We know that $A\times s \approx b$ because `e` is very short. Our objective is to find a vector `b'` in the lattice closed to `b`. We can proceed in two ways: 
 - finding `e`, then subtracting `e` from `b`
 - directly finding `b'`
 
 By using the embedding techinque we are going to find the error vector `e`. Call the error bound `M`.
-Let's create the matrix L in this way:
+Let's create the matrix $L$ in this way:
 
 $$
 \begin{bmatrix}
@@ -41,10 +41,10 @@ $$
 
 The given matrix has got dimension 56 x 51 and represents the basis for the lattice `L'`.
 
-Apply the `LLL` algorithm to the basis matrix and obtain the reducted basis for the lattice `L'`. 
+Apply the `LLL` algorithm to the basis matrix and obtain the reduced basis for the lattice `L'`. 
 The 6th row (without the last element) is the vector `e` we was searching before. Of course, it has dimension 50 x 1.
 
-Given `e`, we can compute `b'` by simply subtract `e` from `b`.
+Given `e`, we can compute `b'` by simply subtracting `e` from `b`.
 
 The difficult part is done. Now we have got the linear equation `As = b'` which is easily solvable.
 
