@@ -24,14 +24,19 @@ The first thing to do is obtaining the session key. We can notice, from the sour
 What happens when the cookie is set to `0`?
 
 `0 = a XOR sess`
+
 `a = 0 XOR sess`
+
 `a = sess`
 
 The private key becomes the session key.
 
+> From this point, we will use a counter `i`. It starts from `0`. 
+
 Now, what happens when we set to `1` only the `i_th` bit of the cookie?
 
 `00000...00010000...000 = a XOR sess`
+
 `a = 00000...00010000...000 XOR sess`
 
 The private key becomes the session key except for one bit which is changed from `0` to `1` or viceversa.
@@ -50,7 +55,7 @@ The last equation can follow two directions:
 **Algorithm**:
 1) Save the public key corresponding to the session key (obtained by setting the cookie to `0`). We call it `REF_public_key`.
 2) For `i` in `0..256` we can compute the public key obtained by setting `i_th` bit of the cookie to `1` and the rest to `0`. We call it `analyzed_public_key`. 
-    - If $$analyzed_key == REF_public_key + 2^i$$ then the `i_th` bit of the session key was `0`
+    - If $analyzed\_key == REF\_public\_key + 2^i$ then the `i_th` bit of the session key was `0`
     - `1` otherwise
 
 
