@@ -11,7 +11,7 @@ You need to pay attention at the scaling function. During encryption the message
 $$m \rightarrow \frac{p}{2}m$$ This operation centeres the message values at $\frac{q}{2}$.
 
 In order to get the original plaintext, you need to downscale your compressed plaintext.
-$$c \rightarrow \frac{2}{p}c$$ This operation will center the values at `0`. The obtained values are in $$\ZZ_p$$, so they are not the original bits `0` and `1`. How can we obtain the bits from those values?
+$$c \rightarrow \frac{2}{p}c$$ This operation will center the values at `0`. The obtained values are in $Z_p$, so they are not the original bits `0` and `1`. How can we obtain the bits from those values?
 
 ![Compression function](writeup/downscale_kyber.jpg)
 
@@ -27,7 +27,7 @@ The public key is composed by the Matrix `A` and the vector `b`:
 
 #### The error vector
 
-The error vector `e` has size 2 x 1 and very coefficients in `{0,1}`.
+The error vector `e` has size 2 x 1 and coefficients in `{0,1}`.
 
 #### Finding the secret vector `s`
 
