@@ -1,7 +1,6 @@
-# snakeCTF 2023
-## [crypto] Robotank: reset token
+### Account reset
 
-### Analysis
+#### Analysis
 In the `account` page, the service gives us:
 - the generator of the group of the elliptic curve
 - the public key (a point on the curve) `P = (x,y)`
@@ -18,7 +17,7 @@ Summarizing:
 - `aG = P`
 - `secret = a XOR sess`
 
-### Getting the session key
+#### Getting the session key
 The first thing to do is obtaining the session key. We can notice, from the source code, that the account page uses the supplied cookie to compute the corresponding private key (by decryption). Then, it uses the computed private key to get the corresponding public key by multiplying it with the curve generator.
 
 What happens when the cookie is set to `0`?
@@ -61,11 +60,11 @@ The last equation can follow two directions:
 
 By doing so, we can obtain the corresponding `session key`. 
 
-### Getting the private key
+#### Getting the private key
 
 If we saved the original encrypted private key (the original cookie), we can obtain the private key by computing the `XOR` between the saved cookie and the session key we got in the previous step.
 
-### Signing the challenge
+#### Signing the challenge
 
 By having the private key, we can easily sign the given `challenge` to obtain the token and reset the account.
 
@@ -74,7 +73,7 @@ By having the private key, we can easily sign the given `challenge` to obtain th
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 ```
 
-### Code
+#### Code
 
 Instead of using a common `ED25519` library, you can use the following simple implementation (Credits to **RedRocket**):
 ```python
@@ -584,5 +583,4 @@ token = private.sign(long_to_bytes(challenge)).hex()
 res = s.post(f"{BASE_URL}{LINK_ACCOUNT}/token", json={"token":token}, headers=headers, verify=VERIFY_CERTIFICATE)
 print(res.text)
 ```
-
 
