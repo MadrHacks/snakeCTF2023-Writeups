@@ -1,7 +1,7 @@
 # snakeCTF2023 - flightyflightflight
 
 * **Category:** OSINT
-* **Author:** `@mrBymax`
+* **Authors:** `GabryV00`,`@mrBymax`
 
 ## Challenge
 
