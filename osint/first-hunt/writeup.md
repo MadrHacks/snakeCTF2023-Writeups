@@ -12,7 +12,7 @@ Let me know if you find something
 
 ## Attachments
 
-An eml file named `info`. (not attached)
+An eml file named `info`.
 
 ## Solution
 
