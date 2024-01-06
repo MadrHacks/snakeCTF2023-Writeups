@@ -21,7 +21,7 @@ The problem is solvable only if errors are not so big, this is the reason why an
 - `e` must be a vector of dimension 50 x 1
 - `s` must be a vector of dimension 5 x 1
 
-There is more than one technique to solve this problem. The following we are presenting is the so called **Kannan's Embedding technique** which works fine in our case because the `error_bound` is small. 
+There is more than one technique to solve this problem. The following we are presenting is the so-called **Kannan's Embedding technique** which works fine in our case because the `error_bound` is small. 
 
 The idea is to define a lattice $L'$ which contains the short vector `e`. 
 We know that $A\times s \approx b$ because `e` is very short. Our objective is to find a vector `b'` in the lattice closed to `b`. We can proceed in two ways: 
@@ -42,7 +42,7 @@ $$
 The given matrix has got dimension 56 x 51 and represents the basis for the lattice `L'`.
 
 Apply the `LLL` algorithm to the basis matrix and obtain the reduced basis for the lattice `L'`. 
-The 6th row (without the last element) is the vector `e` we was searching before. Of course, it has dimension 50 x 1.
+The sixth row (without the last element) is the vector `e` we were searching before. Of course, it has dimension 50 x 1.
 
 Given `e`, we can compute `b'` by simply subtracting `e` from `b`.
 

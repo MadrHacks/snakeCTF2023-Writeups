@@ -35,7 +35,7 @@ $handle_get = fn(&$mysqli, &$account_numbers) =>
 );
 ```
 
-We just have to understand how to control on of the parameters to exploit it.
+We just have to understand how to control one of the parameters to exploit it.
 Let's read how the URL is rewritten in the `.htaccess`:
 
 ```
@@ -68,7 +68,7 @@ By injecting the sort parameter with the payload
     SELECT password FROM users WHERE username='admin' AND password REGEXP BINARY '{regex}'
     ) THEN sleep({SLEEP_TIME}) ELSE num END ))
 ```
-to perform a time based SQLi and retrieve the admin password.
+to perform a time-based SQLi and retrieve the admin password.
 
 We can now log in as admin.
 In the admin page we can create pipelines and execute them to process numbers. 
@@ -164,7 +164,7 @@ The first function checks that the instruction is allowed:
 - lval must be a variable (starting with `$`) and create visible output
 - rval can be any lval, a digit or an alphabetic character
 
-The second function parse the starting number, it can be
+The second function parses the starting number, it can be
 - empty, so it's 0
 - a number
 - a constant, but not `FLAG`
@@ -272,11 +272,11 @@ $set_default_precision = fn(&$precision) =>
 
 To obtain the flag 
 1. we create the pipeline with the payload
-```
-$pages = $user_hooks
-$req_page = $precision
-$req_method = 1
-```
+    ```
+    $pages = $user_hooks
+    $req_page = $precision
+    $req_method = 1
+    ```
 2. start its processing by clicking process
 3. block the request to the page `/admin`
 4. process it in the page `/admin/p-show_flag/`

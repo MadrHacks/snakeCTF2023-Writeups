@@ -35,11 +35,11 @@ First of all, we can filter out all the unnecessary traffic by using the filter 
 What we remain with is HTTP traffic and TCP traffic on port 20000.
 By looking at the HTTP traffic we can see that the client is a raspberry pi and it's running `apt update` \
 But the most interesting part is the TCP traffic on port 20000.
-After searching for the port on google, we find out on [Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+After searching for the port on Google, we find out on [Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 that the protocol is called OpenWebNet and it's used by BTicino devices. \
-The second result on google for "OpenWebNet" is the introduction of the documentation of the protocol. \
+The second result on Google for "OpenWebNet" is the introduction of the documentation of the protocol. \
 So, after some more research we find the [page](https://developer.legrand.com/Documentation/) with every section of the documentation.
-And there is file about some authentication algorithm.
+And there is a file about some authentication algorithm.
 
 ### Finding the authentication algorithm
 
@@ -48,7 +48,7 @@ made. \
 After reading it, we can notice that an older authentication system is mentioned.
 So, we can assume that the device is using the older authentication system. \
 But how can we find the old authentication algorithm? \
-Simply, by looking other implementations of the protocol. The documentation for this algorithm is public, so probably
+Simply, by looking at other implementations of the protocol. The documentation for this algorithm is public, so probably
 someone has already implemented it in a client. \
 Therefore, after a little more investigation we come across this [implementation](https://github.com/karel1980/reopenwebnet)
 of the protocol in python with the old authentication algorithm.
@@ -58,7 +58,7 @@ bruteforceable.
 ### How to get the model's name?
 
 We know that we are talking about some kind of gateway, so the best thing to do is to search in the documentation for the [gateway](https://developer.legrand.com/uploads/2019/12/WHO_13.pdf). \
-In the documentation we can find the model exact message to request the model's name and also the firmware version.
+In the documentation we can find the model's exact message to request the model's name and also the firmware version.
 So, the message for requesting the model's name is `*#13**15##` and the server will respond with a code that represents the model. \
 And the message for requesting the firmware version is `*#13**16##`.
 
