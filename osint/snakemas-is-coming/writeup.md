@@ -13,7 +13,7 @@ I found this super big mall on the internet who sells the perfect decoration!!!
 
 But I don't have money :(
 
-I need a plan to steal the decoration. Maybe I can hack the webcams to watch the security footages and find the perfect moment to act!
+I need a plan to steal the decoration. Maybe I can hack the webcams to watch the security footage and find the perfect moment to act!
 
 I can try my new hacking attack!
 

@@ -3,11 +3,11 @@
 
 ### Analysis
 We are supplied with the code of a cipher, except for the decryption function.
-By reading the code, one could notice that it is a simple version of Kyber (one of the post quantum algorithms proposed at the NIST PQ Competition). It is based on lattices and on the problem we have seen in the previous challenge: learning with errors.
+By reading the code, one could notice that it is a simple version of Kyber (one of the post-quantum algorithms proposed at the NIST PQ Competition). It is based on lattices and on the problem we have seen in the previous challenge: learning with errors.
 
 Otherwise, it is not so difficult to reverse the encryption function by using the secret key. 
 
-You need to pay attention at the scaling function. During encryption the message is first upscaled:
+You need to pay attention to the scaling function. During encryption the message is first upscaled:
 $$m \rightarrow \frac{p}{2}m$$ This operation centeres the message values at $\frac{p}{2}$.
 
 In order to get the original plaintext, you need to downscale your compressed plaintext.
@@ -15,7 +15,7 @@ $$c \rightarrow \frac{2}{p}c$$ This operation will center the values at `0`. The
 
 ![Compression function](writeup/downscale_kyber.jpg)
 
-But....to decrypt the message we need to find the secret key from the given public key. In the previous challenge we was working in $Z_p$, now we are working in the ring $Z_p/\langle x^8+x^7+x^6+x^5+1\rangle$.
+But....to decrypt the message we need to find the secret key from the given public key. In the previous challenge we were working in $Z_p$, now we are working in the ring $Z_p/\langle x^8+x^7+x^6+x^5+1\rangle$.
 
 So...we are working with polynomials of maximum degree equal to `7` and with coefficients belonging to $Z_p$.
 

@@ -2,7 +2,7 @@
 ## [crypto] The fork
 
 ### Analysis
-The first thing to notice is that the cipher is a so-called fork cipher. In particular, it is a tweakable AES-based forkcipher that splits the state after 5 rounds. Fork-ciphers has got 3 main functions:
+The first thing to notice is that the cipher is a so-called fork cipher. In particular, it is a tweakable AES-based forkcipher that splits the state after 5 rounds. Fork-ciphers have got 3 main functions:
 - encrypt
 - decrypt
 - compute_sibling
@@ -10,7 +10,7 @@ The first thing to notice is that the cipher is a so-called fork cipher. In part
 The attack involves the concepts of **differential cryptanalysis** and **reflective trails**. 
 By searching on your favourite search engine you can find this [article](https://eprint.iacr.org/2019/289.pdf).
 
-As for the attack, we suggest to read the full article, expecially the part that involves reflective trail technique. Pay attention that, differently from the article, **you can use a tweak of 128 bits (it makes the attack easier)**.
+As for the attack, we suggest reading the full article, especially the part that involves reflective trail technique. Pay attention that, differently from the article, **you can use a tweak of 128 bits (it makes the attack easier)**.
 
 If you want to learn something about differential cryptanalysis, these are some references:
 

@@ -36,7 +36,7 @@ The functionalities of the module are the following:
 - getting the size and owner of a note
 - getting a full note, including description
 - editing the description of a note
-- transferring a note to another user, aka changing owner
+- transferring a note to another user, aka changing the owner
 - removing a note
 
 ### Vulnerability
@@ -45,9 +45,9 @@ The bug is hard to spot and requires having read the manual for `krealloc`. The 
 
 ### Exploitation
 
-There are many possibilities for the size of the note to use. Different sizes allows overlapping different kernel structures with our note.
+There are many possibilities for the size of the note to use. Different sizes allow overlapping different kernel structures with our note.
 
-Here's an heavily commented and explained exploit:
+Here's a heavily commented and explained exploit:
 
 ```c
 #include "utils.h"

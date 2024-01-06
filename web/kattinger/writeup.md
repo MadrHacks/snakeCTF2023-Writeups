@@ -6,7 +6,7 @@ Fellow cat lovers, I made an app to share out favorites!
 
 ## Solution
 
-The application is a platform to share and comment pictures of cats.
+The application is a platform to share and comment on pictures of cats.
 
 By looking at the source code, we can find that the flag is located in the admin page
 

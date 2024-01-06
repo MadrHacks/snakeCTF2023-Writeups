@@ -6,7 +6,7 @@ The app our new intern made must have some issues, because I saw him checking so
 
 ## Solution
 
-By opening the website we get a redirected to the login screen. 
+By opening the website we get redirected to the login screen. 
 The source code (in `springbrut/src/main/java/com/springbrut/springbrut/controller/AuthController.java`) shows where we can find the flag:
 
 ```java
