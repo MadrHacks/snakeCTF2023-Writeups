@@ -26,4 +26,4 @@ Once the nearby airports had been identified, it was sufficient to compare their
 Obviously, there are other solutions such as the use of GeoINT tools (such as Google Image Search), or the use of Flight Connections to identify the airports from which certain airlines present in some moments of the video fly, filtering the possible solutions.
 
 
-> snakeCTF{snakeCTF{VCE_LIPZ}}
+> snakeCTF{VCE_LIPZ}
