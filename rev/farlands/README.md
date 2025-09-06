@@ -1,6 +1,7 @@
 # Farlands [_snakeCTF 2023_]
 
 **Category**: rev
+**Author**: c0mm4nd_
 
 
 ## Description
