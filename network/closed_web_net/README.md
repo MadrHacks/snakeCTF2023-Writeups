@@ -1,6 +1,7 @@
 # Closed Web Net [_snakeCTF 2023_]
 
-**Category**: network
+**Category**: network\
+**Author**: jotone
 
 
 ## Challenge message
