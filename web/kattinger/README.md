@@ -1,6 +1,7 @@
 # Kattinger [_snakeCTF 2023_]
 
 **Category**: web
+**Author**: peszr
 
 
 ## Description

@@ -1,5 +1,6 @@
 # Smartest Fridge [_snakeCTF 2023_]
 
+**Author**: peszr
 **Category**: web
 
 

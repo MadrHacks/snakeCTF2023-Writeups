@@ -1,5 +1,6 @@
 # Robotank [_snakeCTF 2023_]
 
+**Author**: peszr, campa1102
 **Category**: web
 
 ## Description
