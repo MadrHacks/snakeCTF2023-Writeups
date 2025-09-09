@@ -16,7 +16,7 @@ As for the attack, we suggest reading the full article, especially the part that
 
 If you want to learn something about differential cryptanalysis, these are some references:
 
-- [Linear and differential cryptanalysis on SPN-like ciphers](http://www.cs.bc.edu/~straubin/crypto2017/heys.pdf)
+- [Linear and differential cryptanalysis on SPN-like ciphers](https://cs.bc.edu/straubin/crypto2017/heys.pdf)
 - [Linear and differential cryptanalysis: general overview](https://summerschool-croatia.cs.ru.nl/2014/slides/Differential%20and%20Linear%20Cryptanalysis.pdf)
 
 
